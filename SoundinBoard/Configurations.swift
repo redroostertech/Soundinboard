@@ -19,6 +19,9 @@ let APP_NAME = "SoundinBoard"
 let PARSE_APP_ID = "9khyZ6CQOCovq1D9DolNzQHuXA9bzzAGVLtAK9Et"
 let PARSE_CLIENT_KEY = "7Ny8U4dmerkXL4U4lrAdfObgB8Ibrx70uRuIf06y"
 
+//let PARSE_APP_ID = "yOXXKpMohBQ5NyKbLpP4pDh8QXDAEnJpC0J2irOC"
+//let PARSE_CLIENT_KEY = "rlJ3Ebk5YhTb1Hgd68BAGm7m5X3MxHLpWbjtlCrr"
+
 // ------------------------------------------------
 // MARK: - REPLACE THE RED STRING BELOW WITH YOUR OWN BANNER UNIT ID YOU'LL GET FROM  http://apps.admob.com
 // ------------------------------------------------
@@ -32,7 +35,7 @@ let MAIN_COLOR = UIColor.hexValue(hex: "#8344af")
 // ------------------------------------------------
 // MARK: - EDIT THE EMAIL ADDRESS BELOW AS YOU WISH, IN ORDER TO ALLOW CLIENTS TO CONTACT YOU IN CASE OF SUPPORT
 // ------------------------------------------------
-let SUPPORT_EMAIL_ADDRESS = "support@mydomain.com"
+let SUPPORT_EMAIL_ADDRESS = "soundinboardapp@gmail.com"
 
 // ------------------------------------------------
 // MARK: - ARRAY OF STUFF CATEGORIES - YOU CAN EDIT IT AS YOU WISH

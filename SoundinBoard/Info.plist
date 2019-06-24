@@ -25,16 +25,16 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb677844039312775</string>
+				<string>fb360535154661834</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>677844039312775</string>
+	<string>360535154661834</string>
 	<key>FacebookDisplayName</key>
-	<string>SoundinBoard</string>
+	<string>Soundinboard</string>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-6844181679066097~2667380078</string>
 	<key>LSApplicationQueriesSchemes</key>
