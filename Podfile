@@ -16,7 +16,6 @@ pod 'AWSCore'
 pod 'ObjectMapper', '~> 3.1'
 pod 'Cachable'
 pod 'CVCalendar'
-pod 'SVProgressHUD'
 pod 'LinearProgressBar'
 
 end

@@ -1612,7 +1612,7 @@
                                                     <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                                 </textView>
                                                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzt-Xi-Kjc">
-                                                    <rect key="frame" x="216" y="142" width="31" height="25"/>
+                                                    <rect key="frame" x="206" y="139" width="41" height="28"/>
                                                     <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="11"/>
                                                     <state key="normal" title="[more]">
                                                         <color key="titleColor" red="0.45882352939999999" green="0.29803921570000003" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1863,12 +1863,17 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOy-bO-2Iv">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOy-bO-2Iv" customClass="LinearProgressBar" customModule="LinearProgressBar">
                                 <rect key="frame" x="16" y="216" width="240" height="16"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="bVb-wB-Yda"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                        <color key="value" red="1" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disagree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i54-dU-lpd">
                                 <rect key="frame" x="236" y="213.5" width="68" height="21"/>
@@ -1879,7 +1884,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUZ-Fp-I2Q">
                                 <rect key="frame" x="16" y="213.5" width="45.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1918,6 +1923,7 @@
                         <outlet property="moreFullnameLabel" destination="VkE-yf-mvR" id="Rp3-AK-sK1"/>
                         <outlet property="moreTextView" destination="2SA-TO-6oZ" id="mAY-7J-nRE"/>
                         <outlet property="moreView" destination="0rg-9Q-KDa" id="lfc-pO-Va5"/>
+                        <outlet property="progressBar" destination="vOy-bO-2Iv" id="GUf-97-EqU"/>
                         <outlet property="questionImgButton" destination="TSL-PJ-JNz" id="b0w-fv-1xa"/>
                         <outlet property="questionTxt" destination="cAl-qq-g3u" id="aAI-dN-tKI"/>
                     </connections>

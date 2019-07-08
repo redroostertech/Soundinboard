@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1020"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9FE7EDA641B673E235FD345BF0736F7F"
+               BlueprintIdentifier = "7C356D652FDB21A4DF7D32FF38B966C6"
                BuildableName = "ChameleonFramework.framework"
                BlueprintName = "ChameleonFramework"
                ReferencedContainer = "container:Pods.xcodeproj">

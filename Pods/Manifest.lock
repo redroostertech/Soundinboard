@@ -13,7 +13,6 @@ PODS:
   - SDWebImage (5.0.6):
     - SDWebImage/Core (= 5.0.6)
   - SDWebImage/Core (5.0.6)
-  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
@@ -26,7 +25,6 @@ DEPENDENCIES:
   - LinearProgressBar
   - ObjectMapper (~> 3.1)
   - SDWebImage
-  - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -38,7 +36,6 @@ SPEC REPOS:
     - LinearProgressBar
     - ObjectMapper
     - SDWebImage
-    - SVProgressHUD
 
 EXTERNAL SOURCES:
   APESuperHUD:
@@ -65,8 +62,7 @@ SPEC CHECKSUMS:
   LinearProgressBar: f6a74dbabed229dbb1a7978089e2e4317a3a0ee0
   ObjectMapper: 078b564ed25c6578b62588e306bf1da3924636d4
   SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 15b6bd8558dddf772537e56f8efd4fd3b3ff635e
+PODFILE CHECKSUM: 503fc2272abfbe1e3926a64cbc9378bce9eae979
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.6.0

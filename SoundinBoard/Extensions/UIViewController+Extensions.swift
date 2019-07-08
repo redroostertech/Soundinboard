@@ -1,6 +1,5 @@
 import Foundation
 import UIKit
-import SVProgressHUD
 import ChameleonFramework
 import APESuperHUD
 import Parse
@@ -142,10 +141,10 @@ extension UIViewController {
 //        SVProgressHUD.setForegroundColor(UIColor.white)
 //    }
 
-    func showError(_ error: String, withDelay delay: TimeInterval = 3.0) {
-        SVProgressHUD.showError(withStatus: error)
-        SVProgressHUD.dismiss(withDelay: delay)
-    }
+//    func showError(_ error: String, withDelay delay: TimeInterval = 3.0) {
+//        SVProgressHUD.showError(withStatus: error)
+//        SVProgressHUD.dismiss(withDelay: delay)
+//    }
 
     func scrollToTop(of tableView: UITableView, completion: @escaping () -> Void) {
         DispatchQueue.main.async {
@@ -238,27 +237,27 @@ extension UIViewController {
 }
 
 extension UIViewController {
-    func showErrorAlert(message: String?) {
-        SVProgressHUD.showError(withStatus: message ?? "")
-        SVProgressHUD.setDefaultStyle(.dark)
-        SVProgressHUD.setDefaultMaskType(.gradient)
-        SVProgressHUD.setMinimumDismissTimeInterval(1)
-    }
-    
-    func showErrorAlert(_ error: DadHiveError) {
-        SVProgressHUD.showError(withStatus: error.rawValue)
-        SVProgressHUD.setDefaultStyle(.dark)
-        SVProgressHUD.setDefaultMaskType(.gradient)
-        SVProgressHUD.setMinimumDismissTimeInterval(1)
-    }
-
-    func showAlertErrorIfNeeded(error: Error?) {
-        if let e = error {
-            showErrorAlert(message: e.localizedDescription)
-        } else {
-            SVProgressHUD.dismiss()
-        }
-    }
+//    func showErrorAlert(message: String?) {
+//        SVProgressHUD.showError(withStatus: message ?? "")
+//        SVProgressHUD.setDefaultStyle(.dark)
+//        SVProgressHUD.setDefaultMaskType(.gradient)
+//        SVProgressHUD.setMinimumDismissTimeInterval(1)
+//    }
+//
+//    func showErrorAlert(_ error: DadHiveError) {
+//        SVProgressHUD.showError(withStatus: error.rawValue)
+//        SVProgressHUD.setDefaultStyle(.dark)
+//        SVProgressHUD.setDefaultMaskType(.gradient)
+//        SVProgressHUD.setMinimumDismissTimeInterval(1)
+//    }
+//
+//    func showAlertErrorIfNeeded(error: Error?) {
+//        if let e = error {
+//            showErrorAlert(message: e.localizedDescription)
+//        } else {
+//            SVProgressHUD.dismiss()
+//        }
+//    }
     
 //    func showHUD() {
 //        SVProgressHUD.show()

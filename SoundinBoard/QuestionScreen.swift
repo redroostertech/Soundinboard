@@ -1,5 +1,6 @@
 import UIKit
 import Parse
+import LinearProgressBar
 
 class QuestionScreen: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -18,7 +19,8 @@ class QuestionScreen: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var moreFullnameLabel: UILabel!
     @IBOutlet weak var moreAnsweredLabel: UILabel!
     @IBOutlet weak var editQuestionButton: UIButton!
-    
+    @IBOutlet weak var progressBar: LinearProgressBar!
+
 
 
     /*--- VARIABLES ---*/
@@ -54,6 +56,13 @@ class QuestionScreen: UIViewController, UITableViewDataSource, UITableViewDelega
 
         imagePreviewView.frame.origin.y = view.frame.size.height
         moreView.frame.origin.y = view.frame.size.height
+
+        progressBar.barColorForValue = { value in
+        switch value {
+        default:
+          return UIColor.green
+        }
+      }
 
         
         // Call function
@@ -197,16 +206,22 @@ class QuestionScreen: UIViewController, UITableViewDataSource, UITableViewDelega
                 print(err.localizedDescription)
             } else {
                 print("Count of answers \(totalCount)")
-                let agreeCountQuery = PFQuery(className: ANSWERS_CLASS_NAME)
-                agreeCountQuery.whereKey(ANSWERS_QUESTION_POINTER, equalTo: self.qObj)
-                agreeCountQuery.whereKey(ANSWERS_IS_AGREE, equalTo: true)
-                agreeCountQuery.countObjectsInBackground { (agreeCount, error) in
-                    if let err = error {
-                        print(err.localizedDescription)
-                    } else {
-                        let agreePercentage = (agreeCount / totalCount) * 100
-                        let disagreePercentage = 100 - agreePercentage
-                        print("Count of agreed answers \(agreeCount) - Agree percentage \(agreePercentage)% | Disagree percentage \(disagreePercentage)%")
+                if totalCount == 0 {
+                    self.progressBar.barColor = .white
+                } else {
+                    self.progressBar.barColor = .lightGray
+                    let agreeCountQuery = PFQuery(className: ANSWERS_CLASS_NAME)
+                    agreeCountQuery.whereKey(ANSWERS_QUESTION_POINTER, equalTo: self.qObj)
+                    agreeCountQuery.whereKey(ANSWERS_IS_AGREE, equalTo: true)
+                    agreeCountQuery.countObjectsInBackground { (agreeCount, error) in
+                        if let err = error {
+                            print(err.localizedDescription)
+                        } else {
+                            let agreePercentage = (agreeCount / totalCount) * 100
+                            let disagreePercentage = 100 - agreePercentage
+                            print("Count of agreed answers \(agreeCount) - Agree percentage \(agreePercentage)% | Disagree percentage \(disagreePercentage)%")
+                            self.progressBar.progressValue = CGFloat(agreeCount / totalCount)
+                        }
                     }
                 }
             }
