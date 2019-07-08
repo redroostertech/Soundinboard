@@ -16,11 +16,11 @@ let APP_NAME = "SoundinBoard"
 // ------------------------------------------------
 // MARK: - REPLACE THE STRINGS BELOW WITH YOUR OWN 'App ID' AND 'Client Key' FROM YOUR PARSE APP ON https://back4app.com
 // ------------------------------------------------
-let PARSE_APP_ID = "9khyZ6CQOCovq1D9DolNzQHuXA9bzzAGVLtAK9Et"
-let PARSE_CLIENT_KEY = "7Ny8U4dmerkXL4U4lrAdfObgB8Ibrx70uRuIf06y"
+//let PARSE_APP_ID = "9khyZ6CQOCovq1D9DolNzQHuXA9bzzAGVLtAK9Et"
+//let PARSE_CLIENT_KEY = "7Ny8U4dmerkXL4U4lrAdfObgB8Ibrx70uRuIf06y"
 
-//let PARSE_APP_ID = "yOXXKpMohBQ5NyKbLpP4pDh8QXDAEnJpC0J2irOC"
-//let PARSE_CLIENT_KEY = "rlJ3Ebk5YhTb1Hgd68BAGm7m5X3MxHLpWbjtlCrr"
+let PARSE_APP_ID = "yOXXKpMohBQ5NyKbLpP4pDh8QXDAEnJpC0J2irOC"
+let PARSE_CLIENT_KEY = "rlJ3Ebk5YhTb1Hgd68BAGm7m5X3MxHLpWbjtlCrr"
 
 // ------------------------------------------------
 // MARK: - REPLACE THE RED STRING BELOW WITH YOUR OWN BANNER UNIT ID YOU'LL GET FROM  http://apps.admob.com
@@ -127,6 +127,7 @@ let ANSWERS_DISLIKES = "dislikes"
 let ANSWERS_DISLIKED_BY = "dislikedBy"
 let ANSWERS_REPORTED_BY = "reportedBy"
 let ANSWERS_CREATED_AT = "createdAt"
+let ANSWERS_IS_AGREE = "didAgreeWithQuestion"
 
 let NOTIFICATIONS_CLASS_NAME = "Notifications"
 let NOTIFICATIONS_CURRENT_USER = "currUser"

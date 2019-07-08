@@ -8,6 +8,7 @@ PODS:
     - ChameleonFramework/Default
   - CVCalendar (1.6.2)
   - IQKeyboardManagerSwift (6.3.0)
+  - LinearProgressBar (1.0.1)
   - ObjectMapper (3.5.0)
   - SDWebImage (5.0.6):
     - SDWebImage/Core (= 5.0.6)
@@ -22,6 +23,7 @@ DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - CVCalendar
   - IQKeyboardManagerSwift
+  - LinearProgressBar
   - ObjectMapper (~> 3.1)
   - SDWebImage
   - SVProgressHUD
@@ -33,6 +35,7 @@ SPEC REPOS:
     - Cachable
     - CVCalendar
     - IQKeyboardManagerSwift
+    - LinearProgressBar
     - ObjectMapper
     - SDWebImage
     - SVProgressHUD
@@ -59,10 +62,11 @@ SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   CVCalendar: 515092247b9c5059855643c2a2220f259bd5417f
   IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
+  LinearProgressBar: f6a74dbabed229dbb1a7978089e2e4317a3a0ee0
   ObjectMapper: 078b564ed25c6578b62588e306bf1da3924636d4
   SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: d4fd52835469a8e68dd651f0857edf5ca86b09ad
+PODFILE CHECKSUM: 15b6bd8558dddf772537e56f8efd4fd3b3ff635e
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.6.1

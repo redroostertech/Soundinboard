@@ -189,6 +189,28 @@ class QuestionScreen: UIViewController, UITableViewDataSource, UITableViewDelega
             // error
             } else { self.hideHUD(); self.simpleAlert("\(error!.localizedDescription)")
         }}
+        
+        let countQuery = PFQuery(className: ANSWERS_CLASS_NAME)
+        countQuery.whereKey(ANSWERS_QUESTION_POINTER, equalTo: qObj)
+        countQuery.countObjectsInBackground { (totalCount, error) in
+            if let err = error {
+                print(err.localizedDescription)
+            } else {
+                print("Count of answers \(totalCount)")
+                let agreeCountQuery = PFQuery(className: ANSWERS_CLASS_NAME)
+                agreeCountQuery.whereKey(ANSWERS_QUESTION_POINTER, equalTo: self.qObj)
+                agreeCountQuery.whereKey(ANSWERS_IS_AGREE, equalTo: true)
+                agreeCountQuery.countObjectsInBackground { (agreeCount, error) in
+                    if let err = error {
+                        print(err.localizedDescription)
+                    } else {
+                        let agreePercentage = (agreeCount / totalCount) * 100
+                        let disagreePercentage = 100 - agreePercentage
+                        print("Count of agreed answers \(agreeCount) - Agree percentage \(agreePercentage)% | Disagree percentage \(disagreePercentage)%")
+                    }
+                }
+            }
+        }
     }
     
     

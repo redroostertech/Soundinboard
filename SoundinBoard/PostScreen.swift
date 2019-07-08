@@ -1,4 +1,4 @@
-/*==================================================
+ /*==================================================
  Askk
  
  © XScoder 2019
@@ -22,6 +22,9 @@ class PostScreen: UIViewController, UITextViewDelegate, UINavigationControllerDe
     @IBOutlet weak var attachmentImg: UIImageView!
     @IBOutlet weak var addimageButton: UIButton!
     @IBOutlet weak var removePictureButton: UIButton!
+    @IBOutlet weak var agreeButton: UIButton!
+    @IBOutlet weak var disagreeButton: UIButton!
+    @IBOutlet weak var postButton: UIButton!
     
     
 
@@ -50,13 +53,20 @@ class PostScreen: UIViewController, UITextViewDelegate, UINavigationControllerDe
         if isQuestion {
             if isAnonymous { titleLabel.text = "Ask something (anonymous)"
             } else { titleLabel.text = "Ask something" }
-           
+            agreeButton.isHidden = true
+            disagreeButton.isHidden = true
+            postButton.isHidden = false
             
         // IT'S AN ANSWER
         } else {
             if isAnonymous { titleLabel.text = "Give an answer (anonymous)"
             } else { titleLabel.text = "Give an answer" }
             postTitleLabel.text = "\(qObj[QUESTIONS_QUESTION]!)"
+            
+            agreeButton.isHidden = false
+            disagreeButton.isHidden = false
+            postButton.isHidden = true
+
         }
         
         
@@ -104,7 +114,7 @@ class PostScreen: UIViewController, UITextViewDelegate, UINavigationControllerDe
     // ------------------------------------------------
     // MARK: - POST QUESTION/ANSWER BUTTON
     // ------------------------------------------------
-    @IBAction func postButt(_ sender: Any) {
+    @IBAction func postButt(_ sender: UIButton) {
         if postTxt.text != "" {
             let currentUser = PFUser.current()!
             
@@ -213,6 +223,11 @@ class PostScreen: UIViewController, UITextViewDelegate, UINavigationControllerDe
                 aObj[ANSWERS_QUESTION_POINTER] = qObj
                 aObj[ANSWERS_USER_POINTER] = currentUser
                 aObj[ANSWERS_IS_ANONYMOUS] = isAnonymous
+                if sender == agreeButton {
+                    aObj[ANSWERS_IS_AGREE] = true
+                } else {
+                    aObj[ANSWERS_IS_AGREE] = false
+                }
                 if self.attachmentImg.image != nil {
                     self.saveParseImage(object: aObj, colName: ANSWERS_IMAGE, imageView: self.attachmentImg)
                 } else {
